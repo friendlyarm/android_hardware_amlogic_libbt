@@ -1,3 +1,5 @@
+ifeq ($(BOARD_LIBBT_VENDOR),amlgic)
+
 LOCAL_PATH := $(call my-dir)
 
 ifneq ($(BOARD_HAVE_BLUETOOTH_BCM),)
@@ -33,3 +35,5 @@ include $(BUILD_SHARED_LIBRARY)
 include $(LOCAL_PATH)/conf/40183/Android.mk
 
 endif # BOARD_HAVE_BLUETOOTH_BCM
+
+endif
